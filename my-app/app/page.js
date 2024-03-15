@@ -1,21 +1,8 @@
-"use client";
-
-import Login from "../components/Login/Login";
-import SignUp from "../components/SignUp/SignUp";
-import Home from "../components/Home/Home";
-import { useState } from "react";
+import UserState from "@/components/UserState/UserState";
 
 function Page() {
-  const [log, setLog] = useState(true);
-  const [logIn, setLogIn] = useState(false);
-
-  const changeLog = (val) => {
-    setLog(val);
-  }
   return (
-    <div className="h-screen flex justify-center items-center">
-      {logIn ? <Home/> : log ? <Login changeLog={changeLog}/> : <SignUp changeLog={changeLog}/>}
-    </div>
+    <UserState/>
   );
 }
 
